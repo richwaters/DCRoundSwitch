@@ -465,4 +465,10 @@
 	}
 }
 
+
+-(void) setLabelFont:(UIFont *)fnt
+{
+    self.toggleLayer.labelFont = fnt ;
+}
+
 @end

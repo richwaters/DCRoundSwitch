@@ -15,13 +15,13 @@
 @synthesize onString, offString, onTintColor;
 @synthesize drawOnTint;
 @synthesize clip;
-@synthesize labelFont;
 
 - (void)dealloc
 {
 	[onString release];
 	[offString release];
 	[onTintColor release];
+    [_labelFont release], _labelFont = nil ;  // R.A.W.
 
 	[super dealloc];
 }
@@ -40,6 +40,9 @@
 
 - (UIFont *)labelFont
 {
+    if( _labelFont ) {
+        return _labelFont ;
+    }
 	return [UIFont boldSystemFontOfSize:ceilf(self.bounds.size.height * .6)];
 }
 

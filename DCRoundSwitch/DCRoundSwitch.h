@@ -30,4 +30,8 @@
 - (void)setOn:(BOOL)newOn animated:(BOOL)animated;
 - (void)setOn:(BOOL)newOn animated:(BOOL)animated ignoreControlEvents:(BOOL)ignoreControlEvents;
 
+
+- (void) setLabelFont:(UIFont *) fnt ;
+
+
 @end
