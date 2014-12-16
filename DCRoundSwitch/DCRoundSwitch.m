@@ -343,7 +343,10 @@
 {
 	BOOL previousOn = self.on;
 	on = newOn;
-	self.ignoreTap = YES;
+
+    if( animated ) {  // R.A.W.
+        self.ignoreTap = YES;
+    }
 
 	[CATransaction setAnimationDuration:0.014];
 	self.knobLayer.gripped = YES;
